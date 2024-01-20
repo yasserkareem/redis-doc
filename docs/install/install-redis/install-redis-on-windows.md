@@ -29,6 +29,11 @@ sudo apt-get update
 sudo apt-get install redis
 {{< / highlight  >}}
 
+If above comments failed to retrive packages due to network firwall rules, kindly try above steps after giving below command
+{{< highlight bash  >}}
+echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null
+{{< / highlight  >}}
+
 Lastly, start the Redis server like so:
 
 {{< highlight bash  >}}
